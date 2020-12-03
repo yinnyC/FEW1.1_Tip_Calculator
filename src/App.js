@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-
+import Form from "./Components/Form/Form"
+import Display from "./Components/Display/Display";
 function App() {
+  
+  const [data,setData] = useState({
+    bill:10.00,
+    tip:10,
+    numOfPeople:1
+  })
+
+  const eventhandler = fromChild => {
+    const {name,value} = fromChild
+    setData({...data,
+      [name]:value
+    })
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Tip Calculator</h1>
+      <div className="main">
+        <Form 
+        bill={data.bill}
+        tip = {data.tip}
+        numOfPeople={data.numOfPeople}
+        onChange={eventhandler}/>
+        <Display 
+        bill={data.bill}
+        tip = {data.tip}
+        numOfPeople={data.numOfPeople}
+        />
+      </div>
     </div>
   );
 }

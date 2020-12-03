@@ -1,0 +1,21 @@
+.Display {
+	min-width: 280px;
+	flex: 1.5;
+	padding: 3em 1em 0em 1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.Display .row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 20px;
+}
+
+.Display label {
+	align-self: center;
+}
+
+.Display p {
+	text-align: right;
+}

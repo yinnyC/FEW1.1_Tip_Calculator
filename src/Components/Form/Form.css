@@ -1,0 +1,15 @@
+.Form {
+	color: rgb(107, 106, 106);
+	font-size: smaller;
+	border-right: 0.1em solid rgb(211, 209, 209);
+	border-radius: 8px 0 0 8px;
+}
+.Form label {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.Form .row {
+	display: flex;
+	flex-direction: column;
+	margin: 1.5em;
+	line-height: 1.5em;
+}
